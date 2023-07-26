@@ -3,7 +3,7 @@ import PyPDF2
 import pdfplumber
 
 # path of the pdf file to read
-file = "C:\Users\PC 01\Desktop\Portfolio\AutomationPythonScripts\ConvertPdfToAudio\sample.pdf"
+file = "C:/Users/PC 01/Desktop/Portfolio/AutomationPythonScripts/ConvertPdfToAudio/sample.pdf"
 f = open(file, "rb")
 pdfR = PyPDF2.PdfFileReader(f)
 pages = pdfR.numPages # Get the number of pages
@@ -15,6 +15,6 @@ with pdfplumber.open(file) as pdf:
         print(text)
         
         s = pyttsx3.init()
-        s.save_to_file(text, "C:\Users\PC 01\Desktop\Portfolio\AutomationPythonScripts\ConvertPdfToAudio\audio.mp3")
+        s.save_to_file(text, "C:/Users/PC 01/Desktop/Portfolio/AutomationPythonScripts/ConvertPdfToAudio/audio.mp3")
         s.runAndWait()
 f.close()
